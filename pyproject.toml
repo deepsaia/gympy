@@ -1,0 +1,28 @@
+[project]
+name = "gympy"
+description = "Add your description here"
+requires-python = ">=3.12"
+
+# "dynamic" says we are going to get these project properties by dynamic means.
+# More on each below
+dynamic = ["version", "dependencies", "readme"]
+
+[tool.setuptools.dynamic]
+# Specify the dependencies for the library from what is given in requirements.txt
+dependencies = {file = ["requirements.txt"]}
+
+readme = {file = ["README.md"], content-type = "text/markdown"}
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+exclude = ["tests*"]
+
+[tool.setuptools_scm]
+fallback_version = "0.0.1"
+
+[project.urls]
+Homepage = "https://github.com/deepsaia/gympy"
+Repository = "https://github.com/deepsaia/gympy"
+Documentation = "https://github.com/deepsaia/gympy"
+Issues = "https://github.com/deepsaia/gympy"
