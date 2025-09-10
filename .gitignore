@@ -25,6 +25,7 @@ share/python-wheels/
 .installed.cfg
 *.egg
 uv.lock
+.python-version
 MANIFEST
 
 # PyInstaller
